@@ -1,0 +1,165 @@
+:root {
+    --magenta-verydark: hsl(300, 43%, 22%);
+    --magenta-dark: hsl(303, 10%, 53%);
+    --magenta-light: hsl(300, 24%, 96%);
+    --pink: hsl(333, 80%, 67%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+
+main {
+    padding: 1rem;
+}
+
+.presentation {
+    text-align: center;
+}
+
+.presentation .presentation_title {
+    font-size: 3rem;
+    color: var(--magenta-verydark);
+}
+
+.presentation .presentation_paragraph {
+    font-size: 1.5rem;
+    color: var(--magenta-dark);
+    margin-bottom: 3rem;
+}
+
+.scores .scores_card {
+    background-color: var(--magenta-light);
+    padding: .85rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.scores .scores_card .scores_card_stars {
+    margin: .5rem;
+}
+.scores .scores_card .scores_card_comment {
+    margin: .5rem;
+    font-weight: 900;
+    color: var(--magenta-verydark);
+}
+
+.comments .comments_card {
+    background-color: var(--magenta-verydark);
+    border-radius: .5rem;
+    padding: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.comments .comments_card .comments_card_user {
+    display: flex;
+}
+.comments .comments_card .comments_card_user img {
+    border-radius: 50%;
+    margin-right: 1rem;
+    height: 50px;
+}
+.comments .comments_card .comments_card_user .comments_card_user_data {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.comments .comments_card .comments_card_user .comments_card_user_data--name {
+    flex-basis: 100%;
+    font-weight: 900;
+    margin: 0;
+}
+.comments .comments_card .comments_card_user .comments_card_user_data--charge {
+    flex-basis: 100%;
+    color: var(--pink);
+    margin: 0;
+}
+.comments .comments_card .comments_card_paragraph {
+    padding: .5rem;
+}
+
+@media (min-width:1440px) {
+    main {
+        padding: 8rem 12rem 1rem 12rem;
+    }
+    .hero {
+        display: flex;
+        justify-content: space-between;
+    }
+    .presentation {
+        flex: 1 0 200px;
+        text-align: left;
+        margin-right: 6rem;
+    }
+    .presentation .presentation_title {
+        margin-top: 0;
+        font-size: 2.5rem;
+    }
+    .presentation .presentation_paragraph {
+        font-size: .8rem;
+        margin-bottom: 3rem;
+    }
+
+    .scores {
+        flex: 2 0 200px;
+        display: flex;
+        flex-direction: column;
+    }
+    .scores .scores_card {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 28rem;
+    }
+    .scores .scores_card:nth-of-type(1) {
+        align-self: flex-start;
+    }
+    .scores .scores_card:nth-of-type(2) {
+        align-self: center;
+    }
+    .scores .scores_card:nth-of-type(3) {
+        align-self: flex-end;
+    }
+    .scores .scores_card .scores_card_stars {
+        margin: .5rem;
+    }
+    .scores .scores_card .scores_card_comment {
+        margin: .5rem;
+        font-weight: 900;
+        color: var(--magenta-verydark);
+    }
+
+    .comments {
+        display: flex;
+        height: 18rem;
+    }
+    .comments .comments_card {
+       margin-right: 2rem;
+    }
+    .comments .comments_card:nth-of-type(1){
+        align-self: flex-start;
+    }
+    .comments .comments_card:nth-of-type(2){
+        align-self: center;
+    }
+    .comments .comments_card:nth-of-type(3){
+        align-self: flex-end;
+        margin-right: 0;
+    }
+}
+
+/* attribution Frontend Mentor */
+
+.attribution {
+    margin-top: 5rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
